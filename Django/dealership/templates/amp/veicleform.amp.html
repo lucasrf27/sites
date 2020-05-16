@@ -1,0 +1,34 @@
+{% extends "amp/base.amp.html" %} {% block content %}
+
+<body>
+    <h1>ADD FORM</h1>
+    <div class="form">
+
+        <form method="post" action="/veicles/add" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="modelo">modelo:
+            <input id="modelo" type="text" name="modelo" value="{{ modelo }}">
+          </label><br>
+            <label for="potencia">potencia:
+            <input id="potencia" type="number" name="potencia" value="{{ potencia }}">
+          </label> <br>
+            <label for="cor">cor:
+            <input id="cor" type="text" name="cor" value="{{ cor }}">
+          </label><br>
+            <label for="preco">preco
+            <input id="preco" type="number" step="0.01" name="preco" value="{{ preco }}">
+          </label><br>
+            <label for="ano">ano:
+            <input id="ano" type="year" name="ano" value="{{ ano }}">
+          </label>
+            <form class="" action="veiclesform2.html" method="post">
+                {{ formset.as_table }}
+                <input type="submit" value="OK">
+            </form>
+            <input type="submit" value="OK">
+        </form>
+    </div>
+</body>
+{% endblock %}
+
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+{% get_media_prefix as MEDIA_PREFIX %}
+{% block title %}login{% endblock %}
+{% block content %}
+  <h1 class="tit">login page</h1>
+  <div class="">
+      <h1 class='tit'>login page</h1>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit"/>
+      </form>
+  </div>
+{% endblock %}

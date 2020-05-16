@@ -1,0 +1,18 @@
+{% load static %} {% get_media_prefix as MEDIA_PREFIX %}
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    {% for Veiculos in queryset %}
+    <li>
+        <a href="{% url 'detail2' Veiculos.id %}">
+            <h2>{{Veiculos.modelo}} - {{Veiculos.id}}</h2>
+        </a>
+        <img src="{{ Veiculos.first_image.imagem.url }}" alt="{{Veiculos.modelo}}" height="100" width="100">
+        <a href="{% url 'update2' Veiculos.id %}">update</a>
+    </li>
+    {% endfor %}
+</body>

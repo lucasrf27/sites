@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{parc.nome}} - {{parc.user}} - {{parc.responsavel}}</h1>
+{% for s in parc.servi.all %}
+  <h3>{{s.tipo}}</h3>
+  {% for i in s.images.all %}
+  <img src="{{i.imagem.url}}" width="300px" height="300px">
+  {% endfor %}
+{% endfor %}
+
+<!---UPDATE BUTTON IF CREATOR USER-->
+{% if request.user == parc.user  %}    
+    <form action="{% url 'update_parceiro2' parc.id %}">
+        <button type="submit">Update Parceiro</button>
+    </form>
+<!--ADD SERVICO-->
+    <form action="{% url 'service_add2' %}">
+        <button type="submit">Add servico</button>
+    </form>
+{% endif %}
+
+
+
+
+{% endblock %}

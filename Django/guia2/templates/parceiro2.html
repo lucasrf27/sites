@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{object.user}}</h1>
+<h2>{{ object.nome }} - {{object.endereco}} - {{object.responsavel}}</h2>
+
+<form action="{% url 'update_parceiro2' Parceiros.id %}">
+    <button type="submit"><i class="material-icons">sync</i></button>
+</form>
+{% endblock %}

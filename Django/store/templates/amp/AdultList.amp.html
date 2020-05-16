@@ -1,0 +1,27 @@
+{% extends "amp/base.amp.html" %} {% block title %} >ok
+<{% endblock title %} {% block content %}
+
+
+
+    <h1 class="text-h1 pl">ADULT</h1>
+    <div class="center" id="main">
+
+        {% for p in query %}
+        <article class="thumb">
+            <a class="mb4 pb" href="{% url 'detail-product' p.id %}"><h2 class="car-title">{{v.modelo}}</h2></a>
+            <h3 class="car-title p0">{{p.nome}}</h3>
+            <h4 class="car-title p0">{{p.preco}}</h3>
+            <amp-carousel lightbox width="300" height="300" layout="responsive" type="slides">
+                <amp-img src="{{p.first_image.image.url}}" height="300" width="300" layout="responsive"></amp-img>
+                <amp-img src="{{p.second_image.image.url}}" height="300" width="300" layout="responsive"></amp-img>
+                <amp-img src="{{p.third_image.image.url}}" height="300" width="300" layout="responsive"></amp-img>
+                <amp-img src="{{p.fourth_image.image.url}}" height="300" width="300" layout="responsive"></amp-img>
+            </amp-carouse>
+        </article>
+        {% endfor %}
+    </div>
+    </body>
+
+    {% endblock %}
+
+    </html>

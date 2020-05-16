@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0095)http://admin.westlink.net.br:1980/cobranca/index.php?bid=d6b4bf2058d401c4c12d0396a5338e03&src=a -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Fatura</title>
+	
+	<meta name="desenvolvedor" content="Márcio Araújo - contato@mycore.com.br - http://www.mycore.com.br">
+	<meta name="Generator" content="MyCore Tecnologias">
+	<meta http-equiv="copyright" content="MyCore Tecnologias">
+	<link rel="shortcut icon" href="http://admin.westlink.net.br:1980/boleto/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="http://admin.westlink.net.br:1980/boleto/favicon.ico" type="image/x-icon">
+	<script type="text/javascript">
+		var fnc_print_billets = function(){
+			var x = document.getElementById("bnt_print_billets");
+			x.style.display = "none";
+
+			var conteudo = document.getElementById('print_billets').innerHTML;
+			tela_impressao = window.open('about:blank');
+			tela_impressao.document.write('<style type="text/css"> *{margin:0;padding:0;list-style:none;} .space{display: block;margin: 10px 0;} #cel_vencimento { background-color: #EEEEEE; } #cel_valor { background-color: #EEEEEE; } .aceite { font: bold 10px Arial; color: black } .agencia_codcedente { font: bold 10px Arial; color: black } .agencia_codcedente_mini { font: bold 9px Arial; color: black } .carteira { font: bold 10px Arial; color: black } .cedente { font: bold 10px Arial; color: black } .codigo_banco { font: bold 20px Arial; color: #000000; font-size: 18px; } .codigo_banco_mini { font: bold 14px Arial; color: #000000; font-size: 14px; } .cpf_cnpj { font: bold 10px Arial; color: black } .data_emissao { font: bold 10px Arial; color: black } .data_vencimento { font: bold 10px Arial; color: black } .data_vencimento_mini { font: bold 9px Arial; color: black } .data_documento { font: bold 10px Arial; color: black } .data_processamento { font: bold 10px Arial; color: black } .descontos_abatimentos { font: bold 10px Arial; color: black } .demonstrativo { font: bold 11px Arial; color: black } .demonstrativo_historico { text-align: left; font: bold 11px Arial; color: black } .demonstrativo_tipo { text-align: center; font: bold 11px Arial; color: black } .demonstrativo_valor { text-align: right; font: bold 11px Arial; color: black } .demonstrativo_fatura_historico { text-align: left; font: 10px Arial; color: black } .demonstrativo_fatura_tipo { text-align: center; font: 10px Arial; color: black } .demonstrativo_fatura_valor { text-align: right; font: 10px Arial; color: black } .demonstrativo_desconto_historico { text-align: left; font: 10px Arial; color: black } .demonstrativo_desconto_tipo { text-align: center; font: 10px Arial; color: black } .demonstrativo_desconto_valor { text-align: right; font: 10px Arial; color: black } .demonstrativo_adicional_historico { text-align: left; font: 10px Arial; color: black } .demonstrativo_adicional_tipo { text-align: center; font: 10px Arial; color: black } .demonstrativo_adicional_valor { text-align: right; font: 10px Arial; color: black } .especie { font: bold 10px Arial; color: black } .especie_mini { font: bold 9px Arial; color: black }.instrucoes { font: bold 11px Arial; color: black }.instrucoesfix { font: bold 11px Arial; color: black }.instrucoes_caixa { font: bold 11px Arial; color: black }.instrucoes_scm { font: bold 11px Arial; color: black }.ldstyle { font: bold 14px Arial; color: #000000 }.ldstyle2 { font: bold 14px Arial; color: #000000}.ldstyle3 { font: bold 12px Arial; color: #000000 }.ldstyle4 { font: 14px Arial; color: #000000 }.ldstyle { font: bold 14px Arial; color: #000000; padding-bottom: 7px; }.local_pagamento { font: bold 10px Arial; color: black }.local_pagamento2 { font: bold 11px Arial; color: black }.linha_horizontal { background-image: url(\'/boleto/img/1.jpg\'); background-repeat:repeat-x; }.linha_vertical { background-image: url(\'/boleto/img/1.jpg\'); background-repeat:repeat-y; }.mora_multa { font: bold 10px Arial; color: black }.nome_banco { font: bold 12px Arial; color: black }.nome_banco_mini { font: bold 9px Arial; color: black }.nosso_numero { font: bold 10px Arial; color: black }.numero_documento { font: bold 10px Arial; color: black }.outras_deducoes { font: bold 10px Arial; color: black }.outros_acrescimos { font: bold 10px Arial; color: black }.quantidade  { font: bold 10px Arial; color: black }.sacado { font: bold 10px Arial; color: black }.sacado_endereco { font: bold 10px Arial; color: black }.sacado_cidade_uf { font: bold 10px Arial; color: black }.texto_pequeno { font: bold 9px Arial; color: black }.texto_comum { font: bold 12px Arial; color: black }.titulo_cedente { font: bold 11px Arial; color: #000066 }.titulo_pequeno { font: bold 9px Arial; color: #000000 }.titulo_comum { font: bold 10px Arial; color: black }.titulo_medio { font: 14px Helvetica, sans-serif; color: black }.titulo_grande { font: bold 20px Arial; color: black }.titulo_obs {  font: 9px Arial, Helvetica, sans-serif}.titulo_ct { FONT: 9px "Arial Narrow"; COLOR: #000033 }.titulo_ct2 { FONT: 12px "Arial Narrow"; COLOR: #000033 }.titulo_ct_mini { FONT: 7px Arial; COLOR: #000000 }.valor_documento { font: bold 11px Arial; color: #AA0000 }.valor_documento_mini { font: bold 10px Arial; color: #000000 }.valor_cobrado { font: bold 11px Arial; color: #AA0000 }.valor_unitario { font: bold 11px Arial; color: #AA0000 }.theend { page-break-before: always; }.titulo_ct_capa, .sacado_capa, .sacado_endereco_capa, .sacado_cidade_uf_capa { font-family:"Times New Roman", Times, serif; color: #000000;}.titulo_ct_capa { font-size: 14px; }.sacado_capa, .sacado_endereco_capa, .sacado_cidade_uf_capa { font-size: 10px; }.sacado_capa { font-weight:bold;} </style>');
+			tela_impressao.document.write(conteudo);
+			tela_impressao.window.print();
+			tela_impressao.window.close();
+
+			x.style.display = "block";
+		}
+	</script>
+	<style>
+		@media print {
+			.no-print{ display: none !important;}
+		}
+
+		*{margin:0;padding:0;list-style:none;}
+		.space{display: block;margin: 10px 0;}
+		#cel_vencimento { background-color: #EEEEEE; }
+		#cel_valor { background-color: #EEEEEE; }
+		.aceite { font: bold 10px Arial; color: black }
+		.agencia_codcedente { font: bold 10px Arial; color: black }
+		.agencia_codcedente_mini { font: bold 9px Arial; color: black }
+		.carteira { font: bold 10px Arial; color: black }
+		.cedente { font: bold 10px Arial; color: black }
+		.codigo_banco { font: bold 20px Arial; color: #000000; font-size: 18px; }
+		.codigo_banco_mini { font: bold 14px Arial; color: #000000; font-size: 14px; }
+		.cpf_cnpj { font: bold 10px Arial; color: black }
+		.data_emissao { font: bold 10px Arial; color: black }
+		.data_vencimento { font: bold 10px Arial; color: black }
+		.data_vencimento_mini { font: bold 9px Arial; color: black }
+		.data_documento { font: bold 10px Arial; color: black }
+		.data_processamento { font: bold 10px Arial; color: black }
+		.descontos_abatimentos { font: bold 10px Arial; color: black }
+		.demonstrativo { font: bold 11px Arial; color: black }
+		.demonstrativo_historico { text-align: left; font: bold 11px Arial; color: black }
+		.demonstrativo_tipo { text-align: center; font: bold 11px Arial; color: black }
+		.demonstrativo_valor { text-align: right; font: bold 11px Arial; color: black }
+		.demonstrativo_fatura_historico { text-align: left; font: 10px Arial; color: black }
+		.demonstrativo_fatura_tipo { text-align: center; font: 10px Arial; color: black }
+		.demonstrativo_fatura_valor { text-align: right; font: 10px Arial; color: black }
+		.demonstrativo_desconto_historico { text-align: left; font: 10px Arial; color: black }
+		.demonstrativo_desconto_tipo { text-align: center; font: 10px Arial; color: black }
+		.demonstrativo_desconto_valor { text-align: right; font: 10px Arial; color: black }
+		.demonstrativo_adicional_historico { text-align: left; font: 10px Arial; color: black }
+		.demonstrativo_adicional_tipo { text-align: center; font: 10px Arial; color: black }
+		.demonstrativo_adicional_valor { text-align: right; font: 10px Arial; color: black }
+		.especie { font: bold 10px Arial; color: black }
+		.especie_mini { font: bold 9px Arial; color: black }
+
+		.instrucoes { font: bold 11px Arial; color: black }
+		.instrucoesfix { font: bold 11px Arial; color: black }
+
+		.instrucoes_caixa { font: bold 11px Arial; color: black }
+		.instrucoes_scm { font: bold 11px Arial; color: black }
+
+		.ldstyle { font: bold 14px Arial; color: #000000 }
+		.ldstyle2 { font: bold 14px Arial; color: #000000}
+		.ldstyle3 { font: bold 12px Arial; color: #000000 }
+		.ldstyle4 { font: 14px Arial; color: #000000 }
+		.ldstyle { font: bold 14px Arial; color: #000000; padding-bottom: 7px; }
+		.local_pagamento { font: bold 10px Arial; color: black }
+		.local_pagamento2 { font: bold 11px Arial; color: black }
+		.linha_horizontal { background-image: url('/boleto/img/1.jpg'); background-repeat:repeat-x; }
+		.linha_vertical { background-image: url('/boleto/img/1.jpg'); background-repeat:repeat-y; }
+		.mora_multa { font: bold 10px Arial; color: black }
+		.nome_banco { font: bold 12px Arial; color: black }
+		.nome_banco_mini { font: bold 9px Arial; color: black }
+		.nosso_numero { font: bold 10px Arial; color: black }
+		.numero_documento { font: bold 10px Arial; color: black }
+		.outras_deducoes { font: bold 10px Arial; color: black }
+		.outros_acrescimos { font: bold 10px Arial; color: black }
+		.quantidade  { font: bold 10px Arial; color: black }
+		.sacado { font: bold 10px Arial; color: black }
+		.sacado_endereco { font: bold 10px Arial; color: black }
+		.sacado_cidade_uf { font: bold 10px Arial; color: black }
+		.texto_pequeno { font: bold 9px Arial; color: black }
+		.texto_comum { font: bold 12px Arial; color: black }
+		.titulo_cedente { font: bold 11px Arial; color: #000066 }
+		.titulo_pequeno { font: bold 9px Arial; color: #000000 }
+		.titulo_comum { font: bold 10px Arial; color: black }
+		.titulo_medio { font: 14px Helvetica, sans-serif; color: black }
+		.titulo_grande { font: bold 20px Arial; color: black }
+		.titulo_obs {  font: 9px Arial, Helvetica, sans-serif}
+		.titulo_ct { FONT: 9px "Arial Narrow"; COLOR: #000033 }
+		.titulo_ct2 { FONT: 12px "Arial Narrow"; COLOR: #000033 }
+		.titulo_ct_mini { FONT: 7px Arial; COLOR: #000000 }
+		.valor_documento { font: bold 11px Arial; color: #AA0000 }
+		.valor_documento_mini { font: bold 10px Arial; color: #000000 }
+		.valor_cobrado { font: bold 11px Arial; color: #AA0000 }
+		.valor_unitario { font: bold 11px Arial; color: #AA0000 }
+		.theend { page-break-before: always; }
+
+		.no-print{padding: 1px 10px 1px 7px }
+
+		.titulo_ct_capa, .sacado_capa, .sacado_endereco_capa, .sacado_cidade_uf_capa {
+			font-family:"Times New Roman", Times, serif;
+			color: #000000;
+		}
+		.titulo_ct_capa {
+			font-size: 14px;
+		}
+		.sacado_capa, .sacado_endereco_capa, .sacado_cidade_uf_capa {
+			font-size: 10px;
+		}
+		.sacado_capa {
+			font-weight:bold;
+		}
+
+
+	</style>
+</head>
+<body id="print_billets" text="#000000" bgcolor="#ffffff" topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<button id="bnt_print_billets" class="no-print" onclick="fnc_print_billets()">Imprimir</button><!-- inicio html boleto - Modulo(${MOD}) 07/01/2020 11:23:17 (1578406997) - carne (B) -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="130" valign="top">
+      <!-- parte fixa -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<!-- nome e codigo do banco -->
+					<td>
+						<table cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tbody><tr>
+								<td width="3" valign="bottom"><img height="22" src="./Fatura_files/3.jpg" width="2" border="0"></td>
+								<td><img width="65" height="20" src="./Fatura_files/237.jpg" border="0" alt="bra1 - Bradesco"></td>
+								<td width="3" valign="bottom"><img height="22" src="./Fatura_files/3.jpg" width="2" border="0"></td>
+								<td class="titulo_pequeno" valign="bottom" nowrap=""><div align="center"><font class="codigo_banco_mini">237-2</font></div></td>
+							</tr>
+							<!-- delimitador forçado de largura -->
+							<tr>
+								<td colspan="5"><img height="2" src="./Fatura_files/2.jpg" width="130" border="0"></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<!-- numero do documento -->
+					<td>
+		<table cellspacing="0" cellpadding="0" border="0" width="100%">
+			<tbody><tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top" height="12">Vencimento</td>
+			</tr>
+			<tr>
+				<td valign="top" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="data_vencimento" valign="top" height="12"><span class="data_vencimento">10/01/2020</span></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top" height="12">Agência/Código beneficiário</td>
+			</tr>
+			<tr>
+				<td valign="top" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="agencia_codcedente_mini" valign="top" height="12"><span class="agencia_codcedente_mini">6023- / 0008440-9</span></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td class="titulo_ct_mini" valign="top" height="12" nowrap="">Espécie Moeda</td>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td class="titulo_ct_mini" valign="top" height="12" nowrap="">Quantidade Moeda</td>
+			</tr>
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td class="especie_mini" valign="top" align="left">R$</td>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td class="quantidade" valign="top"></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" id="cel_valor" class="titulo_ct_mini" valign="top" height="12">(=) Valor documento</td>
+			</tr>
+			<tr>
+				<td valign="top" height="12" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" id="cel_valor" class="valor_documento_mini" valign="top" align="right" height="12">59,90&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+
+			<tr>
+				<td valign="top" height="12" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top" height="12">(-) Desconto / Abatimentos</td>
+			</tr>
+			<tr>
+				<td valign="top" height="10" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" height="12" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top" height="12">(-) Outras deduções</td>
+			</tr>
+			<tr>
+				<td valign="top" height="10" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" height="12" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top" height="12">(+) Outros acréscimos</td>
+			</tr>
+			<tr>
+				<td valign="top" height="10" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+			<tr>
+				<td valign="top" height="12" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top" height="12">(=) Valor cobrado</td>
+			</tr>
+			<tr>
+				<td valign="top" height="10" class="cel_valor"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top">Nosso número</td>
+			</tr>
+			<tr>
+				<td valign="top" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="nosso_numero" valign="top" height="12"><span class="nosso_numero">09/00001763886-9</span></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+
+
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top">Número do documento</td>
+			</tr>
+			<tr>
+				<td valign="top" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="numero_documento" valign="top"><span class="numero_documento">271089</span></td>
+			</tr>
+			<tr>
+				<td colspan="4" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+			</tr>
+
+			<tr>
+				<td valign="top" width="7" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" class="titulo_ct_mini" valign="top"><span class="texto_pequeno">
+                <!--*********************************************************************************************************************************--->
+                <font style="text-transform:uppercase; font-size:7px">Lucas Reimol Faria - 173.537.237-42 </font></span>
+<!--*********************************************************************************************************************************--->
+                </td>
+			</tr>
+			<tr>
+				<td valign="top" height="12"><img height="100%" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+				<td colspan="3" valign="top" class="texto_pequeno"></td>
+			</tr>
+
+		</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+
+      <!-- fim parte fixa -->
+    </td>
+<!-- divisoria -->
+		<td width="3"><img src="./Fatura_files/b.jpg" height="1" width="3"></td>
+		<td width="2" valign="top">
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		<img src="./Fatura_files/vp.jpg"><br>
+		</td>
+		<td width="3"><img src="./Fatura_files/b.jpg" height="1" width="3"></td>
+<!-- fim divisoria -->
+
+    <td width="650" valign="top">
+      <!-- parte removivel -->
+      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td>
+						<!-- logo e linha digitavel -->
+						<table cellspacing="0" cellpadding="0" width="560" border="0">
+							<tbody><tr>
+								<td><img width="65" height="20" src="./Fatura_files/237.jpg" border="0" alt="bra1 - Bradesco"></td>
+								<td width="3" valign="bottom"><img height="22" src="./Fatura_files/3.jpg" width="2" border="0"></td>
+								<td class="codigo_banco_mini" nowrap="" width="40" valign="bottom"><div align="center">237-2</div></td>
+								<td width="3" valign="bottom"><img height="22" src="./Fatura_files/3.jpg" width="2" border="0"></td>
+								<td class="ldstyle" nowrap="" align="right" valign="bottom">23796.02309&nbsp;90000.176389&nbsp;86000.844000&nbsp;5&nbsp;81300000005990</td>
+							</tr>
+							<!-- delimitador forçado de largura -->
+							<tr>
+								<td colspan="5"><img height="2" src="./Fatura_files/2.jpg" width="560" border="0"></td>
+							</tr>
+						</tbody></table>
+						<!-- fim logo e linha digitavel -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" border="0" width="560">
+              <!-- local pagamento, vencimento -->
+              <tbody><tr>
+                <td width="7" height="12" valign="top"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" colspan="10" valign="top" class="titulo_ct_mini">Local
+                  de pagamento</td>
+                <td width="7" height="12" valign="top" class="titulo_ct_mini" id="cel_vencimento"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td width="205" height="12" valign="top" class="titulo_ct_mini" id="cel_vencimento">Vencimento</td>
+              </tr>
+              <tr>
+                <td class="titulo_pequeno" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" colspan="10" valign="top"><span class="local_pagamento">PAGÁVEL PREFERENCIALMENTE NAS AGÊNCIAS DO BRADESCO</span></td>
+                <td valign="top" height="12" id="cel_vencimento"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" align="right" height="12" id="cel_vencimento"><span class="data_vencimento">10/01/2020&nbsp;</span></td>
+              </tr>
+              <tr>
+                <td valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="7" border="0"></td>
+                <td height="1" colspan="10" valign="top"><img height="1" src="./Fatura_files/2.jpg" width="426" border="0"></td>
+                <td valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="7" border="0"></td>
+                <td valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="120" border="0"></td>
+              </tr>
+              <!-- fim local pagamento, vencimento -->
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" colspan="10" valign="top" class="titulo_ct_mini">Beneficiário</td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">Agência
+                  / Código Beneficiário</td>
+              </tr>
+              <tr>
+                <td class="titulo_pequeno" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" colspan="10" valign="top"><span class="local_pagamento" style="text-transform:uppercase; font-size:9px">WESTLINK TECNOLOGIA E COMUNICAÇÃO LTDA(FIBRA) - 09.610.690/0001-75</span></td>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" align="right" height="12" id="agencia_codcedente_mini"><span class="agencia_codcedente_mini">6023- / 0008440-9&nbsp;</span></td>
+              </tr>
+              <tr>
+                <td colspan="13" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <!-- data documento / numero documento / especie aceita data processamento nosso numero -->
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" valign="top" class="titulo_ct_mini">Data Doc.</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" class="titulo_ct_mini">Número doc.</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" class="titulo_ct_mini">Espécie Doc</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td width="79" valign="top" class="titulo_ct_mini">Aceite</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td colspan="2" valign="top" class="titulo_ct_mini">Data Processamento</td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">Nosso número</td>
+              </tr>
+              <tr>
+                <td class="titulo_pequeno" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="data_documento" valign="top">07/12/2019</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="numero_documento" valign="top">271089</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="especie_mini" valign="top"><div align="left">DM</div></td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="aceite" valign="top">N</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td colspan="2" align="left" valign="top" class="data_processamento">07/01/2020</td>
+                <td valign="top"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+
+                <td valign="top" align="right" id="nosso_numero"><span class="nosso_numero">09/00001763886-9&nbsp;</span></td>
+              </tr>
+              <tr>
+                <td colspan="13" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <!-- FIM data documento / numero documento / especie aceita data processamento nosso numero -->
+              <!-- parcela plano / especie moeda / quantidade meda / valor moeda / valor documento -->
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" valign="top" class="titulo_ct_mini">Parcela/Plano</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" class="titulo_ct_mini">Espécie Moeda</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" class="titulo_ct_mini">Quantidade Moeda</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td width="79" valign="top" class="titulo_ct_mini">Valor moeda</td>
+                <td valign="top" class="titulo_ct_mini"></td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" class="titulo_ct_mini">Carteira</td>
+                <td id="cel_valor" class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td id="cel_valor" class="titulo_ct_mini" valign="top" height="12">(=)
+                  Valor do documento</td>
+              </tr>
+              <tr>
+                <td class="titulo_pequeno" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="data_documento" valign="top"></td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="especie_mini" valign="top" align="left">R$</td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="quantidade" valign="top"></td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top"></td>
+                <td align="left" valign="top" class="titulo_ct_mini"></td>
+                <td width="7" valign="top" class="titulo_ct_mini"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="carteira" valign="top" align="left">09</td>
+                <td id="cel_valor" valign="top"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td id="cel_valor" class="valor_documento_mini" valign="top" align="right">59,90&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="13" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <!-- detalhes -->
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td height="12" colspan="10" valign="top" class="titulo_ct_mini"><font class="titulo_ct_mini">Instruções
+                  (Texto de responsabilidade do beneficiário)</font></td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">(-) Desconto/Abatimento</td>
+              </tr>
+              <tr>
+                <td valign="top" height="10"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td colspan="10" rowspan="13" valign="top">
+                <p class="instrucoes" style="font-size:8px !important">SR. CAIXA NAO RECEBER APOS 59 DIAS. NAO RECEBER VALOR MENOR DO QUE O INFORMADO. APÓS VENCIMENTO COBRAR MULTA DE R$1,20 E R$0,20 JUROS DIA.<br>Após o vencimento pagar  somente no banco emissor</p>
+                </td>
+                <td valign="top"><img height="10" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" align="right" height="10"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">(-) Outras deduções</td>
+              </tr>
+              <tr>
+                <td valign="top" height="5"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" height="5" colspan="2"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">(+) Mora/Multa</td>
+              </tr>
+              <tr>
+                <td valign="top" height="5"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" height="5" colspan="2"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">(+) Outros Acréscimos</td>
+              </tr>
+              <tr>
+                <td valign="top" height="5"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" height="5" colspan="2"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+              <tr>
+                <td valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12"><img height="12" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td class="titulo_ct_mini" valign="top" height="12">(=) Valor Cobrado</td>
+              </tr>
+              <tr>
+                <td valign="top" height="5"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+                <td valign="top" height="5" colspan="2"><img height="5" src="./Fatura_files/1.jpg" width="1" border="0"></td>
+              </tr>
+              <tr>
+                <td colspan="13" valign="top" height="1"><img height="1" src="./Fatura_files/2.jpg" width="100%" border="0"></td>
+              </tr>
+
+<!-- sacado
+-->
+              <tr>
+                <td class="titulo_ct_mini" colspan="13" height="10" valign="top">Pagador</td>
+              </tr>
+              <tr>
+                <td colspan="13" height="25" valign="top">
+<font class="texto_pequeno" style="text-transform:uppercase; font-size:8px">Lucas Reimol Faria - 173.537.237-42 <br>Rua das Madressilvas, n° s/n, Quadra 17 Lote 9 Casa 4, Barroco, - - Cidade: Maricá, CEP: 24900000, UF: RJ</font>
+				</td>
+              </tr>
+
+<!-- codigo de barras e autenticação -->
+              <tr>
+                <td colspan="13" valign="top" height="50">
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td nowrap="" valign="top"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="3"><img src="./Fatura_files/black.jpg" height="50" width="1"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="3"><img src="./Fatura_files/white.jpg" height="50" width="1"><img src="./Fatura_files/black.jpg" height="50" width="1"></td>
+<td valign="top" width="50%" align="right" class="titulo_ct_mini">Autenticação mecânica&nbsp;</td>
+</tr>
+</tbody></table>
+
+				</td>
+              </tr>
+
+            </tbody></table>
+
+
+<!-- fim tabela conteudo -->
+
+					</td>
+				</tr>
+			</tbody></table>
+<!-- fim parte removivel -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<table cellspacing="0" cellpadding="4px" width="100%" border="0">
+				<tbody><tr>
+					<td height="10"></td>
+				</tr>
+				<tr>
+					<td class="titulo_ct_mini"><img height="1" src="./Fatura_files/6.jpg" width="700" border="0"></td>
+				</tr>
+				<tr>
+					<td height="7"></td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<!-- fim html boleto -->
+
+
+
+</body></html>

@@ -1,0 +1,20 @@
+---------------------------C2EXPERIENCE----------------------------
+Pagina para o dono da Experiencia
+  formulario
+
+Pagina para os clientes
+  lista de atividades
+  
+
+CRIAR DIAS disponiveis
+  data de start, end e Duration
+  tentar guardar a Duration como um objeto DurationField
+
+
+tentar o display da pagina
+
+
+
+
+Background Template
+  template de uma cidade clico daylight experience fica sol night fica noite

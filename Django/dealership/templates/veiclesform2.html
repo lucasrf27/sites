@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% get_media_prefix as MEDIA_PREFIX %}
+
+{% block title %}veicle ADD{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+
+  <body>
+    <h1>ADD VEICULOS</h1>
+    <br>
+    <br>
+    <br>
+    <form id="veicle_form" method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        {{formset.as_table}}
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>
+{% endblock %}

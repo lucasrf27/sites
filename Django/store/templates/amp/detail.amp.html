@@ -1,0 +1,24 @@
+{% extends "amp/base.amp.html" %} {% block tittle %}
+<title>ok</title>{% endblock tittle %} {% block content %}
+
+
+<amp-carousel id="carousel-with-preview" width="450" height="300" type="slides">
+    {% for v in veiculos.images.all %}
+    <amp-img src="{{ v.imagem.url }}" width="450" height="300" layout="fill" alt="apples"></amp-img>
+    {% endfor %}
+    <!--<button on="tap:carousel-with-preview.goToSlide(index=0)">-->
+</amp-carousel>
+
+
+<amp-selector id="carouselWithPreviewSelector" class="carousel-preview" on="select:carouselWithPreview.goToSlide(index=event.targetOption)" layout="container">
+    <amp-img option="0" selected src="https://unsplash.it/60/40?image=10" width="60" height="40" alt="a sample image"></amp-img>
+    {% for i in veiculos.images.all %}
+    <amp-img src="{{ i.imagem.url }}" width="30" height="30" alt="apples"></amp-img>
+    {% endfor %}
+</amp-selector>
+<amp-carousel id="carouselWithPreview" width="400" height="300" type="slides" on="slideChange:carouselWithPreviewSelector.toggle(index=event.index, value=true)">
+    {% for v in veiculos.images.all %}
+    <amp-img src="{{ v.imagem.url }}" width="450" height="300" layout="fill" alt="apples"></amp-img>
+    {% endfor %} {% endblock %}
+</amp-carousel>
+    </html>

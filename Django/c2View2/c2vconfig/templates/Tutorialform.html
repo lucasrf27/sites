@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% get_media_prefix as MEDIA_PREFIX %}
+<!DOCTYPE html>
+<html>
+<body>
+{% block title %}Tutorial ADD{% endblock %}
+{% block content %}
+<h1>ADD Tutorial</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" name="" value="Save">
+</form>
+{% endblock %}
+</body>
+
+</html>

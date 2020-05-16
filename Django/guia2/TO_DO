@@ -1,0 +1,85 @@
+fazer o formmixin do servicos com imagens
+permitir so o usuario certo a alterar os servicos e imagens
+
+
+
+1 passo
+    4 cursos intermediarios (https://app.pluralsight.com/paths/skills/python)
+    pytest 
+
+
+
+urls:
+Homeview (so admin meche)
+Listview 
+    PARCEIROS (todos os parceiros do momento)
+    Servicos (servico de filtro e busca)
+parceiroview (change parceiro se for o proprio) - informaçoes pessoais do parceiro                  
+    addparceiro
+    updateparceiro
+    deleteparceiro
+servicosview (change servicos se for o parceiro) - informacoes de cada servico
+    addservicos(4 extra images)
+    changeservicos
+    deleteservicos
+
+
+
+
+
+
+                TROCAR NOME DESSA MERDA TODA
+
+
+botar lista de permissoes
+    ativar cadastro pra servidor
+    botar o boolean pra ativar o servidor
+        somente admin   
+    
+
+
+
+
+                    PARCEIROS
+cadastro no site
+    permitir qualquer cadastro
+    utilizar e-mail de login (https://testdriven.io/blog/django-custom-user-model/)
+
+
+REQUISITAR LOGIN
+disponibilizar o cadastro de servicos
+    4 imagens por servico
+
+SE<- estiver na pagina propria
+    adicionar e remover servicos
+    alterar imagens
+
+
+
+
+                CLIENTES 
+ver todas as paginas
+mensagem
+    botao de link ao whatsapp do PARCEIROS (ou agente)
+
+comentarios
+    permissoes via google account
+    depositar comentarios inativos
+        ativar ou desativar comentarios
+     
+
+
+
+    
+                  TEXTO
+
+
+    O foco do site e reunir pequenos e medios empresários de diversas areas de serviço
+para que suas arrecadações (pagamentos) reunidos possam pagar uma série de anuncios tão
+forte quanto os dominantes do mercado. Não temos intenção de destituir nenhuma empresa mas
+sim de priorizar os pequenos e medios servidores para que ao concorrer com uma franqueada de grande porte
+Consigam estabelecer um nivel de anuncio tao efetivo quanto os carissimos feitos pelas ditas grandes.
+
+    Acreditamos que serviços que não necessitem responsabilidade legal devem ser igualmente concorridos
+e avaliados por seus clientes para se estabelecer o resultado mais positivo.
+Em outras palavras "Seu João deu um pulo aqui em casa, pinto a casa toda, concertou a maquina e cobrou um preço justo".

@@ -1,0 +1,32 @@
+{% extends 'amp/basetest.html' %}
+{% load static %}
+{% get_media_prefix as MEDIA_PREFIX %}
+
+<body>
+  {% block title %}MP4 amp{% endblock %}
+  {% block content %}
+  {% for MP4 in queryset %}
+  <h2>{{MP4.nome}}</h2>
+  <amp-img class="mp4" src="{{MEDIA_PREFIX}}{{ MP4.imagem }}" alt="Welcome" height="90" width="100"></amp-img>
+  <figure class="ampstart-image-fullpage-hero m0 relative mb4">
+  <amp-img class="mp4" width="90" height="100" layout="responsive" src="" media="(max-width: 415px)" alt="{{MP4.nome}}"></amp-img>
+  <amp-img class="mp4" height="720" layout="fixed-height" src="{{MEDIA_PREFIX}}{{ MP4.imagem }}" media="(min-width: 416px)" alt="Beautiful Image of a rectangle"></amp-img>
+  <figcaption class="absolute top-0 right-0 bottom-0 left-0">
+    <header class="p3">
+      <h1 class="ampstart-fullpage-hero-heading mb3">
+        <span class="ampstart-fullpage-hero-heading-text">
+          {{MP4.nome}}
+        </span>
+      </h1>
+      <span class="ampstart-image-credit h4">
+        By <a href="#" role="author" class="text-decoration-none">D.F. Roy</a>,<br> January 14, 2017
+      </span>
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+        <a class="ampstart-readmore py3 caps line-height-2 text-decoration-none center block h5" href="#content">Read more</a>
+    </footer>
+  </figcaption>
+</figure>
+  {% endfor %}
+</body>
+  {% endblock %}

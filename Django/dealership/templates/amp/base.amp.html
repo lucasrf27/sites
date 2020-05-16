@@ -1,0 +1,587 @@
+{% load static %} {% get_media_prefix as MEDIA_PREFIX %}
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>{% block title %}dealership{% endblock %}</title>
+    <link rel="canonical" href="https://www.example.com/url/to/amp/document.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Open-source framework for publishing content",
+            "datePublished": "2015-10-07T12:02:41Z",
+            "image": [
+                "logo.jpg"
+            ]
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+        
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <style amp-custom>
+        /* any custom styles go here. */
+        
+        body {
+            background-image: url("../static/jrf-noback.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgb(0, 0, 0);
+            padding-top: 150px;
+        }
+        .car-tittle {
+            color: rgba(218,165,32);
+            font-family: 'Oxanium';
+        }
+        
+        .car-things{
+            color: rgba(218,165,32);
+            font-family: 'Oxanium';
+        }
+
+        .back-transparent{
+            background-image: url("../static/jrf-noback.png");
+            opacity: 10%;
+        }
+
+
+        amp-carousel {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        amp-img.grey-placeholder {
+            background-color: grey;
+        }
+        
+        .home-button {
+            margin-top: 8px;
+        }
+        
+        .hamburger {
+            margin-right: 50px;
+        }
+        
+        .headerbar {
+            background: rgba(218,165,32);
+            color: white;
+            font-size: 3em;
+            text-align: center;
+            height: 50px;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .sidebar {
+            padding: 10px;
+            margin: 0;
+        }
+        
+        .sidebar>li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            text-decoration: underline white;
+        }
+        
+        .close-sidebar {
+            font-size: 1.5em;
+            padding-left: 5px;
+        }
+        
+        .site-name {
+            flex: 1;
+            margin-left: -36px;
+        }
+        
+        article {
+            margin-top: 50px;
+        }
+        
+        div.center {
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            margin-top: 0px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .background-img {
+            background-image: url("../static/jrf-noback.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #000;
+        }
+
+        .oppacity {
+            opacity: 80%;
+        }
+
+        .oppacity:hover {
+            opacity: 100%;
+        }
+        
+
+        .box {
+            display: inline-block;
+        }
+        
+        .gallery2 {
+            display: inline;
+            padding: 35px;
+            background-color: transparent;
+            border-image-width: 0em;
+        }
+        
+        article {
+            float: right;
+            padding: 90px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+        
+        .ampstart-headerbar {
+            background-color: rgb(255, 255, 255);
+            color: #fff;
+            z-index: 999;
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1)
+        }
+        
+        .ampstart-headerbar+:not(amp-sidebar),
+        .ampstart-headerbar+amp-sidebar+* {
+            margin-top: 3.5rem
+        }
+        
+        .ampstart-headerbar-nav .ampstart-nav-item {
+            padding: 0 1rem;
+            background: transparent;
+            opacity: .8;
+            color: rgba (218,165,32);
+            cursor: crosshair;
+        }
+        
+        .ampstart-headerbar-nav {
+            line-height: 3.5rem
+        }
+        
+        .fixed {
+            position: fixed
+        }
+        
+        .flex {
+            display: -ms-flexbox;
+            display: flex
+        }
+        
+        .justify-start {
+            -ms-flex-pack: start;
+            justify-content: flex-start
+        }
+        
+        .items-center {
+            -ms-flex-align: center;
+            align-items: center
+        }
+        
+        .top-0 {
+            top: 0
+        }
+        
+        .right-0 {
+            right: 0
+        }
+        
+        .bottom-0 {
+            bottom: 0
+        }
+        
+        .left-0 {
+            left: 0
+        }
+
+        .text-h1{
+            color: rgba(218,165,32);
+            margin-top: 0px;
+            padding-right: 10px;
+            padding-left: 20px;
+        }
+
+        .pl2 {
+            padding-left: 1rem
+        }
+        
+        .pr4 {
+            padding-right: 2rem
+        }
+        
+        .ampstart-navbar-trigger:focus {
+            outline: none
+        }
+        
+        .ampstart-nav a,
+        .ampstart-navbar-trigger,
+        .ampstart-sidebar-faq a {
+            cursor: pointer;
+            text-decoration: none
+        }
+        
+        .ampstart-navbar-trigger {
+            line-height: 3.5rem;
+            font-size: 1.75rem;
+            color: rgba(218,165,32, 1);
+        }
+        
+        .absolute{
+            position: absolute;
+        }
+        
+        .flex-wrap {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap
+        }
+        
+        #main {
+            -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
+            -webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
+            -ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
+            transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            -moz-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+        
+        .block{
+            display: inline-block;
+        }
+
+        #main .thumb {
+            background: url("../static/jrf-noback.png") no-repeat center center fixed;
+            -moz-transition-delay: 2.525s;
+            -webkit-transition-delay: 2.525s;
+            -ms-transition-delay: 2.525s;
+            transition-delay: 2.525s;
+            height: calc(10vh - 20em);
+            min-height: 20em;
+            width: 25%;
+        }
+
+        
+        .ampstart-sidebar {
+            background-color: #000;
+            color: #fff;
+            min-width: 300px;
+            width: 300px
+        }
+        
+        .ampstart-sidebar .ampstart-icon {
+            fill: #fff
+        }
+        
+        .ampstart-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem
+        }
+        
+        .ampstart-sidebar .ampstart-nav-dropdown {
+            margin: 0
+        }
+        
+        .ampstart-sidebar .ampstart-navbar-trigger {
+            line-height: inherit
+        }
+        
+        .px3 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+        
+        .flex {
+            display: -ms-flexbox;
+            display: flex inline-block
+        }
+        
+        .ampstart-navbar-trigger svg {
+            pointer-events: none
+        }
+        
+        .ampstart-nav-item:active,
+        .ampstart-nav-item:focus,
+        .ampstart-nav-item:hover {
+            opacity: 1;
+            color: blueviolet;
+            background-color: white;
+        }
+        
+        .ampstart-sidebar .ampstart-dropdown-item,
+        .ampstart-sidebar .ampstart-dropdown header,
+        .ampstart-sidebar .ampstart-faq-item,
+        .ampstart-sidebar .ampstart-nav-item,
+        .ampstart-sidebar .ampstart-social-follow {
+            margin: 0 0 2rem
+        }
+        
+        .ampstart-footer .ampstart-social-follow li:last-child {
+            margin-right: 0
+        }
+        
+        .list-reset {
+            list-style: none;
+            padding-left: 0
+        }
+        
+        .m0 {
+            margin: 0
+        }
+        
+        .p0 {
+            padding: 30
+        }
+        
+        .ampstart-label {
+            text-transform: uppercase
+        }
+        
+        .ampstart-byline,
+        .ampstart-caption,
+        .ampstart-hint,
+        .ampstart-label {
+            font-size: .875rem;
+            color: #fff;
+            line-height: 1.125rem;
+            letter-spacing: .06rem
+        }
+        
+        .ampstart-nav .ampstart-label {
+            color: inherit
+        }
+        
+        .ampstart-nav-dropdown .ampstart-dropdown-item,
+        .ampstart-nav-dropdown .ampstart-dropdown>section>header {
+            background-color: #000;
+            color: #fff
+        }
+        
+        .ampstart-nav-dropdown .ampstart-dropdown-item {
+            color: #fff
+        }
+        
+        .items-start {
+            -ms-flex-align: start;
+            align-items: flex-start
+        }
+        
+        .mb4 {
+            margin-bottom: 0rem
+        }
+        
+        .pb {
+            padding-bottom: 0rem;
+        }
+        .inline-block {
+            display: inline-block;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        
+        .cursor-cell {
+            cursor: cell;
+            color: rgba(218,165,32);
+        }
+        
+        .p1 {
+            padding: .5rem
+        }
+        
+        .justify-around {
+            -ms-flex-pack: distribute;
+            justify-content: space-around
+        }
+        
+        .home-gallery {
+            background-color: #000;
+            opacity: 50%;
+            margin-top: 0em;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .home-gallery:hover {
+            opacity: 100%;
+        }
+        
+        .cover {
+            object-fit: cover;
+            padding-bottom: 0px;
+        }
+        
+
+        
+        .ampstart-nav-link {
+            font-family: 'Yeon Sung', cursive;
+            color: rgba(218,165,32);
+            cursor: crosshair;
+        }
+        
+        .home-title {
+            color: rgba(218,165,32, 1);
+            cursor: crosshair;
+            text-decoration: 10px;
+        }
+        
+        .home-text {
+            color: whitesmoke;
+            text-shadow: 2px 2px rgba(218,165,32, 1);
+        }
+        
+        .mid {
+            text-align: center;
+        }
+        
+        .flex-column {
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+        
+        .mini-gallery {
+            background-color: #000;
+            -webkit-box-align: center;
+            padding-right: 10px;
+            padding-left: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4 pb0 ">
+        <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  ">☰
+        </div>
+    </header>
+
+    <!-- Start Sidebar -->
+    <amp-sidebar id="header-sidebar" class="ampstart-sidebar px3  " layout="nodisplay">
+        <div class="flex justify-start items-center ampstart-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
+        </div>
+        <nav class="ampstart-sidebar-nav ampstart-nav">
+            <ul class="list-reset m0 p0 ampstart-label inline-block">
+                <li class="ampstart-nav-item  "><a class="ampstart-nav-link " href="{% url 'amp_home2' %}">Home</a></li>
+                <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="{% url 'amp_category2' %}">category</a></li>
+                <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="#locations">bla bla</a></li>
+                <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="{% url 'amp_test2' %}">test</a></li>
+            </ul>
+        </nav>
+        
+
+
+        <ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0 mb4">
+            <li>
+                <a href="#" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.2" viewBox="0 0 53 49"><title>Twitter</title><path d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6" class="ampstart-icon ampstart-icon-twitter"></path></svg></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="23.6" viewBox="0 0 56 55"><title>Facebook</title><path d="M47.5 43c0 1.2-.9 2.1-2.1 2.1h-10V30h5.1l.8-5.9h-5.9v-3.7c0-1.7.5-2.9 3-2.9h3.1v-5.3c-.6 0-2.4-.2-4.6-.2-4.5 0-7.5 2.7-7.5 7.8v4.3h-5.1V30h5.1v15.1H10.7c-1.2 0-2.2-.9-2.2-2.1V8.3c0-1.2 1-2.2 2.2-2.2h34.7c1.2 0 2.1 1 2.1 2.2V43" class="ampstart-icon ampstart-icon-fb"></path></svg></a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 54 54"><title>instagram</title><path d="M27.2 6.1c-5.1 0-5.8 0-7.8.1s-3.4.4-4.6.9c-1.2.5-2.3 1.1-3.3 2.2-1.1 1-1.7 2.1-2.2 3.3-.5 1.2-.8 2.6-.9 4.6-.1 2-.1 2.7-.1 7.8s0 5.8.1 7.8.4 3.4.9 4.6c.5 1.2 1.1 2.3 2.2 3.3 1 1.1 2.1 1.7 3.3 2.2 1.2.5 2.6.8 4.6.9 2 .1 2.7.1 7.8.1s5.8 0 7.8-.1 3.4-.4 4.6-.9c1.2-.5 2.3-1.1 3.3-2.2 1.1-1 1.7-2.1 2.2-3.3.5-1.2.8-2.6.9-4.6.1-2 .1-2.7.1-7.8s0-5.8-.1-7.8-.4-3.4-.9-4.6c-.5-1.2-1.1-2.3-2.2-3.3-1-1.1-2.1-1.7-3.3-2.2-1.2-.5-2.6-.8-4.6-.9-2-.1-2.7-.1-7.8-.1zm0 3.4c5 0 5.6 0 7.6.1 1.9.1 2.9.4 3.5.7.9.3 1.6.7 2.2 1.4.7.6 1.1 1.3 1.4 2.2.3.6.6 1.6.7 3.5.1 2 .1 2.6.1 7.6s0 5.6-.1 7.6c-.1 1.9-.4 2.9-.7 3.5-.3.9-.7 1.6-1.4 2.2-.7.7-1.3 1.1-2.2 1.4-.6.3-1.7.6-3.5.7-2 .1-2.6.1-7.6.1-5.1 0-5.7 0-7.7-.1-1.8-.1-2.9-.4-3.5-.7-.9-.3-1.5-.7-2.2-1.4-.7-.7-1.1-1.3-1.4-2.2-.3-.6-.6-1.7-.7-3.5 0-2-.1-2.6-.1-7.6 0-5.1.1-5.7.1-7.7.1-1.8.4-2.8.7-3.5.3-.9.7-1.5 1.4-2.2.7-.6 1.3-1.1 2.2-1.4.6-.3 1.6-.6 3.5-.7h7.7zm0 5.8c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7 5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7zm0 16c-3.5 0-6.3-2.8-6.3-6.3s2.8-6.3 6.3-6.3 6.3 2.8 6.3 6.3-2.8 6.3-6.3 6.3zm12.4-16.4c0 1.3-1.1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-1.2 1-2.3 2.3-2.3 1.2 0 2.3 1.1 2.3 2.3z" class="ampstart-icon ampstart-icon-instagram"></path></svg></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML pin trest"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="28.5" viewBox="0 0 43 51"><title>pinterest</title><path d="M8.134 18.748c0-1.6.2-3 .8-4.4.5-1.4 1.2-2.6 2.2-3.6.9-1 2-1.9 3.2-2.6 1.2-.8 2.5-1.3 3.9-1.7 1.5-.4 2.9-.5 4.4-.5 2.2 0 4.3.4 6.2 1.4 1.9.9 3.5 2.3 4.7 4.1 1.2 1.9 1.8 3.9 1.8 6.2 0 1.4-.1 2.7-.4 4-.2 1.3-.7 2.6-1.2 3.8-.6 1.2-1.3 2.3-2.2 3.2-.8.9-1.8 1.7-3.1 2.2-1.2.6-2.5.9-4 .9-1 0-1.9-.3-2.9-.7-.9-.5-1.6-1.1-2-1.9-.1.5-.3 1.4-.6 2.4-.3 1.1-.4 1.7-.5 2-.1.3-.2.9-.4 1.6-.3.7-.4 1.2-.6 1.5-.1.3-.4.7-.7 1.3-.3.6-.6 1.2-1 1.7-.3.5-.7 1.1-1.3 1.8l-.3.1-.2-.2c-.2-2.2-.3-3.6-.3-4 0-1.3.2-2.8.5-4.4.3-1.7.8-3.7 1.4-6.2.6-2.5 1-3.9 1.1-4.4-.5-.9-.7-2.1-.7-3.6 0-1.2.4-2.3 1.1-3.3.8-1.1 1.7-1.6 2.8-1.6.9 0 1.6.3 2.1.9.4.6.7 1.3.7 2.2 0 .9-.3 2.3-1 4.1-.6 1.8-.9 3.1-.9 4 0 .9.3 1.6 1 2.2.6.6 1.4.9 2.3.9.8 0 1.5-.2 2.2-.5.6-.4 1.2-.9 1.6-1.5.5-.6.9-1.3 1.2-2 .4-.8.6-1.5.8-2.4.2-.8.4-1.6.5-2.4.1-.7.1-1.4.1-2.1 0-2.5-.8-4.4-2.3-5.8-1.6-1.4-3.6-2.1-6.1-2.1-2.8 0-5.2 1-7.1 2.8-1.9 1.9-2.9 4.2-2.9 7.1 0 .6.1 1.2.3 1.8.2.6.4 1.1.6 1.4.2.3.4.7.5 1 .2.3.3.5.3.6 0 .4-.1.9-.3 1.6-.2.6-.5 1-.8 1 0 0-.1-.1-.4-.1-.7-.2-1.3-.6-1.9-1.2-.5-.6-1-1.3-1.3-2-.3-.8-.5-1.6-.7-2.4-.2-.7-.2-1.5-.2-2.2z" class="ampstart-icon ampstart-icon-pinterest"></path></svg></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML E-mail"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="18.4" viewBox="0 0 56 43"><title>email</title><path d="M10.5 6.4C9.1 6.4 8 7.5 8 8.9v21.3c0 1.3 1.1 2.5 2.5 2.5h34.9c1.4 0 2.5-1.2 2.5-2.5V8.9c0-1.4-1.1-2.5-2.5-2.5H10.5zm2.1 2.5h30.7L27.9 22.3 12.6 8.9zm-2.1 1.4l16.6 14.6c.5.4 1.2.4 1.7 0l16.6-14.6v19.9H10.5V10.3z" class="ampstart-icon ampstart-icon-email"></path></svg></a>
+            </li>
+        </ul>
+
+    </amp-sidebar>
+    {% block content %} {% endblock %}
+    <!-- Start Footer -->
+    <footer class="ampstart-footer flex flex-column items-center px3 ">
+
+
+        <small class="home-text">
+              © C2View
+        </small>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% get_media_prefix as MEDIA_PREFIX %}
+<!DOCTYPE html>
+<html>
+{% block content %}
+<body>
+  {% block title %}Tutorial{% endblock %}
+  <h1>Tutorials</h1>
+  <!-- ADD BUTTON-->
+  <form method="get" action="{% url 'tutorial-add' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"><i class="material-icons">add</i></button>
+  </form>
+  <div class="cats">
+    <ul>
+        {% for Tutorial in object_list %}
+        <!--LIST-->
+            <li>
+              <a href="{{Tutorial.url}}">
+                <p>{{Tutorial.assunto}} - {{Tutorial.preview}} - {{Tutorial.data}}</p>
+              </a>
+              <!--UPDATE BUTTON-->
+              <form action="{% url 'tutorial-update' Tutorial.id %}">
+                <button type="submit"><i class="material-icons">sync</i></button>
+              </form>
+              <!-- DELETE BUTTON -->
+              <form action="{% url 'tutorial-delete' Tutorial.id %}" method='post'>
+                {% csrf_token %}
+                <button type="submit" onclick="return confirm('are you sure to delete?')"><i class="material-icons">delete</i></button>
+              </form>
+            </li>
+
+        {% endfor %}
+    </ul>
+  </div>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <a href="{% url 'tutorial-add'  %}"<i class="material-icons">add</i></a>
+</form>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,46 @@
+{% extends "amp/base.amp.html" %} {% block title %}Home {% endblock title %} {% block content %}
+
+
+    <div class="center background-img top-0 absolute">
+            <amp-carousel class="home-gallery" lightbox controls autoplay delay="3000" height="1500" width="800" layout="responsive" type="slides">
+                {% for B in filter1 %}
+                <div class="slide">
+                    <amp-img class="cover" src="{{B.imagem.url}}"  width="200" height="150" layout="responsive" alt=""></amp-img>
+                </div>
+                {% endfor %}
+            </amp-carousel>
+    </div>
+    <br>
+    <!--TEXT AREA-->
+    <h1>ok</h1>
+    <div class="center">
+        <h1 class="home-title">lets do it</h1>
+        <p class="home-text p0">seja bem vindo a JR <br>  pensando </p>
+    </div>
+    <!--main Veicles-->
+    <div class="center gallery2">
+        {% for b in filter2|slice:":2" %}
+        <div class="box border10">
+            <amp-carousel lightbox class="mini-gallery" width="600" height="600" type="slides">
+                <amp-img class="gallery2" src="{{b.first_banner_image.imagem.url}}" width="600" height="800" layout="fill" alt=""></amp-img>
+                <amp-img class="gallery2" src="{{b.second_banner_image.imagem.url}}" width="600" height="800" layout="responsive" alt=""></amp-img>
+                <amp-img class="gallery2" src="{{b.third_banner_image.imagem.url}}" width="600" height="800" layout="responsive" alt=""></amp-img>
+                <amp-img class="gallery2" src="{{b.fourth_banner_image.imagem.url}}" width="600" height="800" layout="responsive" alt=""></amp-img>
+            </amp-carousel>
+            <a href="{% url 'kids_list_product' %}"><h2 class="home-text">{{ b.nome }}</h2></a>
+        </div>
+
+        {% endfor %}
+
+</div>
+
+    <!--button veicles-->
+<div class="center">
+    <!--Google Maps-->
+    <amp-iframe width="1400" height="500" sandbox="allow-scripts allow-same-origin" layout="responsive" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3295575019347!2d-43.06997568555951!3d-22.93808704475414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99868e03ed4c95%3A0xb8bee12a7e12e16c!2sR.%20Jorn.%20Ramiro%20Cruz%2C%2029%20-%20Piratininga%2C%20Niter%C3%B3i%20-%20RJ%2C%2024350-343!5e0!3m2!1spt-BR!2sbr!4v1573073022345!5m2!1spt-BR!2sbr">
+    </amp-iframe>
+</div>
+
+<!--Footer (testar no base)-->
+
+{% endblock %}

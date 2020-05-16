@@ -1,0 +1,84 @@
+
+criar a detail page
+
+
+refazer password
+  https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication
+
+
+
+Ajustar o categorias no Usuario
+  definir o model caracteristicas
+    foreign field to Veiculos
+
+verificar se os details e categorys estao de acordo
+  ligar os TEMPLATES
+    home2 - display da pagina inicial
+
+
+                   CLIENTE
+
+BASE PAGE
+html
+
+
+HOME PAGE
+  first gallery
+  text
+  3 mini gallerys
+  map
+  footer
+
+CATEGORY PAGE
+  all mini gallerys dos objects
+    modelo
+    preço
+    potencia
+    audio
+    botão ver mais
+
+DETAIL PAGE
+  big gallery
+  botao do audio
+  componentes (direção hidraulica e etc)
+  simule o financiamento
+
+CONTACT PAGE
+  text
+  endereços e telefones
+  whatsapp
+  chat
+  e-mail
+  mapa
+
+                  USUARIO
+
+BASE PAGE
+ nada
+
+
+HOME PAGE
+  first gallery
+  3 mini gallerys
+
+CATEGORY PAGE
+  all mini gallerys dos objects
+    modelo
+    preço
+    potencia
+    audio
+    botão ver mais
+
+DETAIL PAGE
+  big gallery
+  botao do audio
+  componentes (direção hidraulica e etc)
+  simule o financiamento
+
+CONTACT PAGE
+  text
+  endereços e telefones
+  whatsapp
+  chat
+  e-mail
+  mapa

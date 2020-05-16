@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% get_media_prefix as MEDIA_PREFIX %}
+<!DOCTYPE html>
+
+<body>
+  {% block title %}MP4{% endblock %}
+  {% block content %}
+  <h1 class= "tit">perdida</h1>
+  <!-- ADD BUTTON -->
+  <form method="get" action="{% url 'add' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"><i class="material-icons">add</i></button>
+  </form>
+  <!-- LIST -->
+  <div class="cats">
+    <ul>
+        {% for MP4 in object_list %}
+        <li>
+        <h2>{{MP4.artista}} - </h2>
+        <a href="{{MP4.url}}" target="blank"><img src="{{MEDIA_PREFIX}}{{MP4.imagem}}" href="{{MP4.url}}" alt="{{MP4.nome}}" height="100" width="100"></a>
+        </li>
+        {% endfor %}
+    </ul>
+  </div>
+  <!-- ADD BUTTON  -->
+<form method="get" action="{% url 'add' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit"><i class="material-icons">add</i></button>
+</form>
+{% endblock %}
+</body>
+
+</html>
+
+<!--
+{% for MP4 in object_list %}
+    <li>
+      <h2>{{MP4.nome}}- {{MP4.preço}} - {{MP4.artista}}</h2>
+      <a href="{{MP4.url}}" target="_blank">
+        <img src="{{MEDIA_PREFIX}}{{ MP4.imagem }}" alt="{{ MP4.nome }}"width="90px" height="90px"/>
+      </a>
+      <!-- update BUTTON
+      <form action="{% url 'update' MP4.id %}">
+        <button type="submit"><i class="material-icons">sync</i></button>
+      </form>
+      <!-- DELETE BUTTON
+      <!--<form action="{% url 'delete' MP4.id %}" method='post'>
+        {% csrf_token %}
+        <button type="submit" onclick="return confirm('are you sure to delete?')"><i class="material-icons">delete</i></button>
+      </form>
+    </li>
+{% endfor %} -->

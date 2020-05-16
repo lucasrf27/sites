@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+<h1>ok</h1>
+<h1>OK</h1>
+<h1>ok</h1>
+
+<form id="service_form" method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    {{formset.as_table}}
+  <input type="submit" name="submit" value="Submit " />
+</form>
+{% endblock %}

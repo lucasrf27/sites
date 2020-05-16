@@ -1,0 +1,17 @@
+[[source]]
+url = 'https://pypi.python.org/simple'
+verify_ssl = true
+name = 'pypi'
+
+[requires]
+python_version = '3.6.1'
+
+[packages]
+Django = '>=2.0.4'
+django-rest-swagger = '>=2.2.0'
+djangorestframework = '>=3.8.2'
+psycopg2-binary = '>=2.7.4'
+
+[dev-packages]
+nose = '*'
+unittest2 = {version = ">=1.0,<3.0", markers="python_version < '2.7.9' or (python_version >= '3.0' and python_version < '3.4')"}

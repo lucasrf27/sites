@@ -1,0 +1,84 @@
+                AGORA
+RESOLVER O ONGOING
+
+TESTAR O CODIGO DE IMPORTAÇÃO DE DATABASE
+
+CRIAR OS FILTER FORMS
+
+VOICE RECORDING NO SITE
+
+TENTAR AGREGAR O DATABASE
+  https://docs.djangoproject.com/en/2.2/topics/db/multi-db/
+
+Choicefields no herewego pra responder o stack
+  fazer o choice
+  checar o filtro depois
+  responder
+
+
+
+MP4
+adcionar filtro de check
+  ver se ja nao adicionou aquela musica
+
+Passar o ONGOING pra um novo app
+  categorizar por linguagem
+  ativar filtragem por data*
+  colocar nivel de necessidade
+      ativar icones representando(empacado, Urgente, Ajuda)
+      Choicefields
+        direcionario de valores
+      utilizar o nivel com base em variaveis para decidir a importância
+  botão de add_to_tutorial (depois de aprendido)
+  UpdateView(add task)
+    adcionar um topico a aquele Ongoing object (BOTAO DE ADD TOPIC NA DetailView)
+    Passar a data do ultimo update
+    gravar a data do update e o usuario q a realizou no futuro
+  Convert audio to text
+  Ativar o icone na ListView de feito ou em andamento, e nivel de necessidade
+    caso Feito, passar a tarefa para tutorials
+      displayando detalhes da tarefa e o form de tutorials no mesmo html
+  Checar a qualidade de usabilidade
+    praticidade de realizar as tarefas na mesma tela (tipo excel)
+    utilizar somente urls para HomeView e DetailView
+      talvez utilizar de java para abrir as janelas
+  Construir template em AMP
+    tabela, Navbar
+    Transferir para o base.html e outros templates
+
+Management config
+PRODUTOS
+  lista de preço filtrada
+  status de estoque e vendido
+  quantidade de estoque e vendido
+    sinal de alerta nos estoques
+detailview por base dos dias
+  quantidade vendida
+  valor recebido
+  vendedores
+balanceamento mensal
+balanceamento anual
+detailview por base dos produtos
+  foto, preço, taxa de vendas mensal, relacionados
+  categorização por relacionados
+USUARIOS
+  CRIAR O ADMIN PRO CHEFE SEM SER PELO /ADMIN
+  LOGIN DE FUNCIONARIO
+
+ChatVoice
+Criar uma plataforma para estudar e trabalhar pique discord
+
+
+
+HORA DE INSERIR VIDEOS
+
+
+
+CRIAR A REDE DE DISCORD PRA ESTUDO CONJUNTO
+    RAFA
+
+
+
+
+
+FOCOOOO

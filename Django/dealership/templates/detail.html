@@ -1,0 +1,15 @@
+{% load static %} {% get_media_prefix as MEDIA_PREFIX %}
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    {% for v in veiculos.imagens_set.all %}
+    <li>
+        <img src="{{ v.imagem.url }}" alt="{{Veiculos.modelo}}" height="20" width="20">
+    </li>
+    {% endfor %}
+    </div>
+</body>

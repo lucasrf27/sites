@@ -1,0 +1,22 @@
+[
+  {
+    "model": "dealer.car",
+    "pk": 1,
+    "fields": {
+      "brand": "Toyota",
+      "year": 2015,
+      "created_time": "2018-05-10T08:16:59.844Z",
+      "updated_time": "2018-05-12T08:16:59.844Z"
+    }
+  },
+  {
+    "model": "dealer.car",
+    "pk": 2,
+    "fields": {
+      "brand": "Acura",
+      "year": 2013,
+      "created_time": "2018-05-11T08:16:59.844Z",
+      "updated_time": "2018-05-13T08:16:59.844Z"
+    }
+  }
+]
