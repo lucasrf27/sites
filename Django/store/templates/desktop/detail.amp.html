@@ -1,0 +1,45 @@
+{% extends "desktop/base2.amp.html" %} {% block tittle %}
+{{prod.nome}}{% endblock %}
+
+{% block content %}
+<!--CAROUSEL PREVIEW-->
+    <div class="carousel-preview">
+    {% for p in prod.images.all %}
+        <button class="preview" on="tap:detail-carousel.goToSlide(index={{forloop.counter0}})">
+            <amp-img
+                src="{{p.image.url}}"
+                width="100"
+                height="120"
+                alt="apples"
+            ></amp-img>
+        </button>
+        <br>
+    {% endfor %}
+    </div>
+  <!--CAROUSEL-->
+    <div class="detail">
+        <amp-carousel lightbox controls autoplay delay="3000" 
+        id="detail-carousel"
+        width="500"
+        height="500"
+        layout="fixed"
+        type="slides">
+        {% for pic in prod.images.all %}
+            <amp-img src="{{pic.image.url}}"
+            width="700"
+            height="700"
+            layout="fixed"
+            alt=""></amp-img>
+        {% endfor %}
+        </amp-carousel>
+    </div>
+    <!--TEXTS-->
+    <div class="buy">
+        <h1 class="home-text">{{prod.nome}}</h1>
+        <h1 class="home-text">R$: {{prod.preco}}</h1>
+        <h1 class="home-text">Tamanho: {{prod.model.tamanho}}</h1>
+        <a class="buy" href="{% url 'add_to_cart' prod.id %}">Adicionar ao Carrinho</a>    
+        </a>
+        </button>
+    </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "desktop/base2.amp.html" %}
+{% block title %}Teste {% endblock title %}
+{% block content %}
+{% load static %}
+
+<body>
+    {% for p in query1 %}
+        <h1>{{p.nome}}</h1>
+        {% for pic in p.images.all %}
+            <amp-img src="{{pic.image.url}}" layout="fixed" width="100" height="100" alt=""></amp-img>
+        {% endfor %}
+    {% endfor %}
+
+    {% for p in query1 %}
+        <h1>{{p.nome}}</h1>
+        <amp-img src="{{p.images.first.image.url}}" layout="fixed" width="100" height="100" alt=""></amp-img>
+    {% endfor %}
+
+
+
+
+
+<!--
+    <div class='test'>
+    {% for p in query1 %}
+        <h1> {{p.nome}} </h1>
+        <amp-carousel width="200"
+        height="200"
+        layout="fixed"
+        type="slides">
+        {% for pic in p.images.all %}
+            <amp-img src="{{ pic.image.url }}"
+            width="400"
+            height="400"
+            layout="fixed"
+            alt="{{ p.nome }}">
+            </amp-img>
+        {% endfor %}
+        </amp-carousel>
+    {% endfor %}
+
+    {% if request.user.username == 'AnonymousUser' %}
+        <h1>ok</h1>
+    {% endif %}
+-->
+
+
+    </div>
+</body>
+
+
+{% endblock %}
