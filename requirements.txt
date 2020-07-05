@@ -38,3 +38,7 @@ virtualenv==20.0.3
 virtualenvwrapper-win==1.2.6
 wcwidth==0.1.8
 wrapt==1.11.2
+django
+gunicorn
+django-heroku
+requests

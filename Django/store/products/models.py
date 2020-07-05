@@ -1,5 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from .managers import ProdutoManager
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Modelo(models.Model):
@@ -42,6 +44,7 @@ class Modelo(models.Model):
     YEAR_CHOICES = []
     for r in range(0, 12):
         YEAR_CHOICES.append((r, r))
+    YEAR_CHOICES.append(('Adulto', 'Adulto'))
 
     Crianca = 'Crianca'
     Adulto = 'Adulto'
@@ -68,24 +71,14 @@ class Produto (models.Model):
     preco = models.DecimalField(max_digits=5, decimal_places=2)
     created_time = models.DateTimeField(auto_now=True)
     updated_time = models.DateTimeField(auto_now_add=True)
-    first_gallery = models.BooleanField(default=False, blank=True)
-    mini_gallery = models.BooleanField(default=False, blank=True)
+    quantidade = models.IntegerField(default=1)
+    activate = models.BooleanField(default=True)
+
+    objects = ProdutoManager()
+
 
     def __str__(self):
         return '%s - %s' % (self.nome, self.model)
-
-    
-    def first_image(self):
-        return self.images.first()  
-
-    def second_image(self):
-        return self.images.all()[1]
-    
-    def third_image(self):
-        return self.images.all()[2]
-
-    def fourth_image(self):
-        return self.images.all()[3]
 
 def get_image_filename(instance, filename):
     nome = instance.product.nome
@@ -98,6 +91,11 @@ class Imagem (models.Model):
     image = models.ImageField(upload_to=get_image_filename)
 
 
+class Contact (models.Model):
+    nome = models.CharField(max_length=100)
+    phone = PhoneNumberField()
+    email = models.EmailField()
+    mensagem = models.TextField(max_length=600, default='Mensagem')
 
 class Banner(models.Model):
     Inicial = 'Inicial'
@@ -116,18 +114,6 @@ class Banner(models.Model):
 
     def __str__(self):
         return '%s %s' % (self.nome, self.tipo)
-    
-    def first_banner_image(self):
-        return self.banner_image.first()  
-
-    def second_banner_image(self):
-        return self.banner_image.all()[1]
-    
-    def third_banner_image(self):
-        return self.banner_image.all()[2]
-
-    def fourth_banner_image(self):
-        return self.banner_image.all()[3]
 
 
 def get_banner_image_filename(instance, filename):
@@ -138,6 +124,7 @@ def get_banner_image_filename(instance, filename):
 class BannerImages(models.Model):
     bannering = models.ForeignKey(Banner, on_delete=models.CASCADE, related_name='banner_image')
     imagem = models.ImageField(upload_to=get_banner_image_filename)
+    link = models.URLField(max_length=200, default='products/home')
 
     def __str__(self):
         return '%s %s' % (self.bannering, self.imagem)

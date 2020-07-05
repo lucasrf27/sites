@@ -2,8 +2,8 @@ from django import forms
 from django.contrib.auth import (
     authenticate,
     get_user_model
-
 )
+from .models import Profile
 
 User = get_user_model()
 
@@ -25,6 +25,13 @@ class UserLoginForm(forms.Form):
             if not user.is_active:
                 raise forms.ValidationError('This user is not active')
         return super(UserLoginForm, self).clean(*args, **kwargs)
+
+
+class ProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ('nome', 'endereco', 'email', 'phone')
 
 
 class UserRegisterForm(forms.ModelForm):
@@ -55,3 +62,12 @@ class UserRegisterForm(forms.ModelForm):
             raise forms.ValidationError(
                 "This email has already been registered")
         return super(UserRegisterForm, self).clean(*args, **kwargs)
+
+
+
+
+class AutomaticUser(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username']
+

@@ -1,6 +1,53 @@
+                    AGORA
+
+
+
+
+
+
+ADICIONAR O DYNAMIC FILTER
+
+ADICIONAR OS QUERYS AOS MANAGERS E FINALIZAR ESSA PORRA
+
+
+
+<div class="filters"/>
+    ativar os filters por estilos de ROUPAS
+    click on calca list product so com CALÇAS
+    ativar Masculuno e Feminino
+
+
+
+Ativar um model quantity pra saber quantos daquele Item foram pedidos
+
+ativar 2 meios quantidade total de pedidos naquele Item (quantas vezes ele foi pedido no total)
+ativar quantitade naquele pedido especifico
+
+TENTAR STACK
+
+
+
+
 RECOMENDAR POSSIVEIS OPÇÕES PARA FORMAR CONJUNTO
     ABRIU A PAGINA DA CAMISA TER CALÇAS E SHORTS RECOMENDADOS A ABAIXO
     NA PAGINA DE CADASTRO DO PRODUTO 
+
+
+
+PAGINA DE PAGAMENTO EXPOR OS MEIOSDE PAGAMENTO
+
+
+
+                            LOGICA
+
+Produtos One to one com Items. e a quantidade de Item vai pelo campo quantity.
+Item many to many com Pedido (varios pedidos tem varios daqueles items)
+no Pedido voce tem uma lista de item e um is_ordered=False ao finalizar o pedido(is_ordered=True) a quantity daquele Item vai subtrair na quantity do produto
+
+
+
+
+
 
 
 
@@ -53,3 +100,14 @@ GESTAO DE VENDAS
         VENDA TOTAL DO PRODUTO
         HIT DE VENDAS
         
+
+
+
+            DONE
+
+
+
+LOGAR O USUARIO APOS DIGITAR O NOME APENAS
+    FAZER O CARRINHO COM BASE NESSE USUARIO LOGADO
+        ATIVAR SELECT PELO TAMANHO
+        ADICIONAR AO CARRINHO

@@ -1,11 +1,11 @@
-{% load static %} {% get_media_prefix as MEDIA_PREFIX %}
 <!DOCTYPE html>
+{% load static %} {% get_media_prefix as MEDIA_PREFIX %}
 <html>
 
 <head>
     <meta charset="utf-8">
     <!-- css file-->
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'products/style.css' %}">
     <!-- icons ---->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- bootstrap -->
@@ -40,6 +40,7 @@
                         <a class="dropdown-item" href="{% url 'register' %}">register</a>
                         <a class="dropdown-item" href="{% url 'add_product' %}">add product</a>
                         <a class="dropdown-item" href="{% url 'add_banner' %}">add banner</a>
+                        <a class="dropdown-item" href="{% url 'automatic' %}">automatic</a>
                     </div>
                 </li>
                 <li class="nav-item">

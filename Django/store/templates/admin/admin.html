@@ -1,8 +1,9 @@
-{% extends "base2.html" %}
+{% extends "admin/base2.html" %}{% load static %}
 {% block title %}
   ADMIN
 {% endblock %}
 {% block content %}
+    <h1 class="test">test</h1>
     <button>
         <a href="{% url 'add_product' %}>" adicionar produto</a>
     </button>
@@ -17,8 +18,11 @@
 
     <h1>TEST</h1>
 
-    {% for p in object_list %}
+    {% for p in query %}
         <h1>{{p.nome}}, {{p.model}}</h1>
+        {% for pic in p.images.all %}
+            <img src="{{ pic.image.url }}">
+        {% endfor %}
         <!--UPDATE BUTTON-->
         <form action="{% url 'update_product' p.id %}">
             <button type="submit"><i class="material-icons">sync</i></button>
@@ -29,4 +33,5 @@
             <button type="submit" onclick="return confirm('Deseja deletar o produto?')"><i class="material-icons">delete</i></button>
         </form>
     {% endfor %}
+    <h1 class="test"> ok</h1>
 {% endblock %}

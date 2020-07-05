@@ -6,12 +6,16 @@ from django.contrib.auth import (
     login,
     logout
 )
-from .forms import UserLoginForm, UserRegisterForm
+from .forms import UserLoginForm, UserRegisterForm, AutomaticUser
 from django.contrib.auth.decorators import login_required
 from products.models import Produto
 from django.urls import reverse_lazy, reverse
+from .decorators import already_authenticated_user, allowed_users
+from django.contrib.auth.models import Group
 
 
+
+@already_authenticated_user
 def login_view(request):
     next = request.GET.get('next')
     form = UserLoginForm(request.POST or None)
@@ -27,10 +31,11 @@ def login_view(request):
     context = {
         'form': form,
     }
-    return render(request, "login.html", context)
+    return render(request, "admin/login.html", context)
 
-@login_required
+@allowed_users(allowed_ones=['Admin'])
 def register_view(request):
+    group = Group.objects.get(name='Vendedor')
     next = request.GET.get('next')
     form = UserRegisterForm(request.POST or None)
     if form.is_valid():
@@ -38,33 +43,44 @@ def register_view(request):
         password = form.cleaned_data.get('password')
         user.set_password(password)
         user.save()
+        user.groups.add(group)
         new_user = authenticate(username=user.username, password=password)
         login(request, new_user)
         if next:
             return redirect(next)
-        return redirect('products/home')
+        return redirect('../../products/admin')
 
     context = {
         'form': form,
     }
-    return render(request, "signup.html", context)
+    return render(request, "admin/signup.html", context)
+
+
+def automatic_view(request):
+    next = request.GET.get('next')
+    group = Group.objects.get(name='Cliente')
+    form = AutomaticUser(request.POST or None)
+    if form.is_valid():
+        user = form.save(commit=False)
+        user.set_password("pass")
+        user.save()
+        user.groups.add(group)
+        new_user = authenticate(username=user.username, password="pass")
+        login(request, new_user)
+        if next:
+            return redirect(next)
+        return redirect('../../products/home')
+    if request.user_agent.is_mobile:
+        return render(request, "amp/automatic.amp.html", {'form': form})
+    elif request.user_agent.is_pc:
+        return render(request, "desktop/automatic.amp.html", {'form': form})
+    else:
+        return render(request, "amp/automatic.amp.html", {'form': form})
+
 
 def logout_view(request):
     logout(request)
     return redirect('../login')
 
-def login_view2(request):
-    form = UserLoginForm(request.POST or None)
-    if form.is_valid():
-        username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password')
-        user = authenticate(request, username=username, password=password)
-        login(request, user)
-        # Redirect to a success page.
-        return  redirect('../home')
-    else:
-        # Return an 'invalid login' error message.
-        messages.error(request, 'user s not valid')
-        return redirect('login')
-    return render(request, "amp/login.html", {'form': form})
+
 

@@ -31,7 +31,7 @@ class MP4create(CreateView):
     success_url = '/c2vconfig/MP4'
     model = MP4
     queryset = MP4.objects.all()
-    fields = ['nome', 'url', 'preço', 'imagem', 'artista']
+    fields = ['nome', 'url', 'imagem', 'artista']
 
 
 class MP4update(UpdateView):
